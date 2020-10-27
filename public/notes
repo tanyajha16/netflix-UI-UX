@@ -1,0 +1,9 @@
+i like to make certain notes while learning something 
+last time i created a very simple single page netflix page.... now i think about it, can't really call it a clone but it did 
+helped me learned alot new things so nevertheless i am starting with a little big project
+
+-> created app... cleaned all unnecessary files 
+-> installed dependencies - normalize.css , firebase, fuse.js, styled components, react-router-dom
+-> lets find out what they do
+
+1. creating jumbotron
