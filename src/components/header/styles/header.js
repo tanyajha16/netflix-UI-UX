@@ -61,6 +61,7 @@ export const SearchInput = styled.input`
   transition: width 0.5s;
   height: 30px;
   font-size: 14px;
+  border-radius: 5px;
   margin-left: ${({ active }) => (active === true ? '10px' : '0')};
   padding: ${({ active }) => (active === true ? '0 10px' : '0')};
   opacity: ${({ active }) => (active === true ? '1' : '0')};
@@ -90,6 +91,10 @@ export const SearchIcon = styled.button`
     filter: brightness(0) invert(1);
     width: 16px;
   }
+
+  &:focus {
+    outline: none;
+  }
 `
 
 export const ButtonLink = styled(ReachRouterLink)`
@@ -112,25 +117,30 @@ export const ButtonLink = styled(ReachRouterLink)`
 `
 
 export const Picture = styled.button`
-  background: url(${({ src }) => src});
+  background: url(${({ src }) => `../images/users/${src}.png`});
   background-size: contain;
   border: 0;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
 `
 
 export const Dropdown = styled.div`
   display: none;
   position: absolute;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.75);
   padding: 10px;
-  width: 100px;
-  top: 32px;
-  right: 10px;
+  width: 125px;
+  top: 40px;
+  right: 15px;
+  border-radius: 5px;
+  border-top-right-radius: 0px;
 
   ${Group}:last-of-type ${Link} {
     cursor: pointer;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
   }
 
   ${Group} {
