@@ -35,11 +35,11 @@ function Signin() {
   return (
     <>
       <HeaderContainer>
-        <Form onSubmit={handleSignin} method='POST'>
+        <Form>
           <Form.Title>Sign In</Form.Title>
           {error && <Form.Error>{error}</Form.Error>}
 
-          <Form.Base>
+          <Form.Base onSubmit={handleSignin} method='POST'>
             <Form.Input
               placeholder='Email address'
               value={emailAddress}
@@ -48,7 +48,7 @@ function Signin() {
 
             <Form.Input
               type='password'
-              placeholder='password'
+              placeholder='Password'
               autocomplete='off'
               value={password}
               onChange={({ target }) => setPassword(target.value)}
