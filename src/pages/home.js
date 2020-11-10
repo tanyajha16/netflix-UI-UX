@@ -14,12 +14,12 @@ function Home() {
             Watch anytime. Cancel at any time.
           </Feature.SubTitle>
           <OptForm>
-            <OptForm.Input placeholder='Email Address' />
-            <OptForm.Button>Get Started</OptForm.Button>
             <OptForm.Text>
               Ready to watch? Enter your email to create or restart your
               membership
             </OptForm.Text>
+            <OptForm.Input placeholder='Email address' />
+            <OptForm.Button>Get Started</OptForm.Button>
           </OptForm>
         </Feature>
       </HeaderContainer>
