@@ -9,6 +9,7 @@ import {
   Link,
   Input,
   Submit,
+  Facebook,
 } from './styles/form'
 
 function Form({ children, ...restProps }) {
@@ -37,6 +38,15 @@ Form.TextSmall = function FormTextSmall({ children, ...restProps }) {
 
 Form.Link = function FormLink({ children, ...restProps }) {
   return <Link {...restProps}>{children}</Link>
+}
+
+Form.Facebook = function FormFacebook({ children, ...restProps }) {
+  return (
+    <Facebook {...restProps}>
+      <img src='/images/misc/facebook.svg' alt='facebook' />
+      {children}
+    </Facebook>
+  )
 }
 
 Form.Input = function FormInput({ children, ...restProps }) {

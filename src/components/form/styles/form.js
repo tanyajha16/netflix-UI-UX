@@ -90,3 +90,21 @@ export const Submit = styled.button`
     opacity: 0.5;
   }
 `
+
+export const Facebook = styled.div`
+  margin-top: 50px;
+  color: #737373;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: scaleY(0.9);
+
+  & > img {
+    object-fit: contain;
+    width: 20px;
+    margin-right: 10px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+`

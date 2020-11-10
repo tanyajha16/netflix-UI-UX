@@ -5,6 +5,7 @@ import { HeaderContainer } from '../containers/header'
 import { FooterContainer } from '../containers/footer'
 import { Form } from '../components'
 import * as ROUTES from '../constants/routes'
+import Firebase from 'firebase'
 
 function Signin() {
   const history = useHistory()
@@ -28,6 +29,19 @@ function Signin() {
       .catch((error) => {
         setEmailAddress('')
         setPassword('')
+        setError(error.message)
+      })
+  }
+
+  const handleFacebookLogin = () => {
+    const provider = new Firebase.auth.FacebookAuthProvider()
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then(() => {
+        history.push(ROUTES.BROWSE)
+      })
+      .catch((error) => {
         setError(error.message)
       })
   }
@@ -58,6 +72,9 @@ function Signin() {
               Sign In
             </Form.Submit>
           </Form.Base>
+          <Form.Facebook onClick={handleFacebookLogin}>
+            Login With Facebook
+          </Form.Facebook>
           <Form.Text>
             New to Netflix? <Form.Link to='/signup'>Sign up now.</Form.Link>
           </Form.Text>
