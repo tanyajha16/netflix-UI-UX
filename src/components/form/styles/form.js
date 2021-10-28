@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 660px;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 1);
   border-radius: 5px;
   box-sizing: border-box;
   width: 100%;
@@ -13,6 +13,7 @@ export const Container = styled.div`
   max-width: 450px;
   padding: 60px 68px 40px;
   margin-bottom: 100px;
+  margin-top:6rem;
 `
 
 export const Error = styled.div`
@@ -80,7 +81,7 @@ export const Submit = styled.button`
   border-radius: 4px;
   font-size: 16px;
   font-weight: bold;
-  margin: 24px 0 12px;
+  margin: 12px 0 12px;
   padding: 16px;
   border: 0;
   color: white;
@@ -102,6 +103,7 @@ export const Facebook = styled.div`
     object-fit: contain;
     width: 20px;
     margin-right: 10px;
+  
   }
 
   &:hover {

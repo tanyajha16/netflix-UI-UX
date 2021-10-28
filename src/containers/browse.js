@@ -87,15 +87,17 @@ function BrowseContainer({ slides }) {
           </Header.Group>
         </Header.Frame>
         <Header.Feature>
-          <Header.FeatureCallOut>Watch Joker Now</Header.FeatureCallOut>
+          <Header.FeatureCallOut>Watch Little Things Now </Header.FeatureCallOut>
           <Header.Text>
-            Forever alone in the crowd, failed comedian Arthur Fleck seeks
-            connection as he walks the streets of Gotham City. Arthur wears two
-            masks -- the one he paints for his day job as a clown, asd the guise
-            he projects ina futile sttempt to feel like he's part of the world
-            around him.
+          A cohabiting couple in their 20s navigate the ups and downs of work,
+          modern-day relationships and finding themselves
+          in contemporary Bengaluru.
           </Header.Text>
-          <Header.PlayButton>Play</Header.PlayButton>
+          {/* <Header.PlayButton>Play</Header.PlayButton> */}
+          <Player>
+          <Player.Button />
+          <Player.Video src={'/videos/lt.mp4'} />
+            </Player>
         </Header.Feature>
       </Header>
 
